@@ -1,0 +1,266 @@
+/* Game Container */
+.game-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Menu Screen */
+.menu-screen {
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 50px;
+  border-radius: 20px;
+}
+
+.menu-title {
+  font-size: 72px;
+  margin: 0 0 20px 0;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.menu-subtitle {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.menu-instructions {
+  margin-top: 30px;
+  font-size: 18px;
+  text-align: left;
+  max-width: 400px;
+}
+
+.menu-instructions p {
+  margin: 8px 0;
+}
+
+/* Buttons */
+.btn-primary {
+  font-size: 24px;
+  padding: 15px 40px;
+  background: #FFD700;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
+}
+
+.btn-primary:hover {
+  transform: scale(1.1);
+}
+
+.btn-secondary {
+  font-size: 24px;
+  padding: 15px 40px;
+  background: #666;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
+}
+
+.btn-secondary:hover {
+  transform: scale(1.05);
+}
+
+/* Game Canvas */
+.game-canvas-container {
+  position: relative;
+}
+
+.game-canvas {
+  border: 4px solid #FFD700;
+  border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  cursor: crosshair;
+  background: #87CEEB;
+}
+
+/* HUD */
+.hud {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 18px;
+  min-width: 200px;
+}
+
+.hud-item {
+  margin: 5px 0;
+}
+
+.health-bar-container {
+  width: 150px;
+  height: 20px;
+  background: #333;
+  border-radius: 10px;
+  margin-top: 5px;
+  overflow: hidden;
+}
+
+.health-bar {
+  height: 100%;
+  transition: width 0.3s;
+}
+
+.health-bar.high {
+  background: #00ff00;
+}
+
+.health-bar.medium {
+  background: #ffaa00;
+}
+
+.health-bar.low {
+  background: #ff0000;
+}
+
+/* Shop Button */
+.shop-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #FFD700;
+  border: none;
+  border-radius: 10px;
+  padding: 15px 25px;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
+}
+
+.shop-button:hover {
+  transform: scale(1.05);
+}
+
+/* Shop Panel */
+.shop-panel {
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  min-width: 250px;
+}
+
+.shop-title {
+  margin: 0 0 15px 0;
+}
+
+.shop-item {
+  margin-bottom: 10px;
+}
+
+.shop-item-button {
+  width: 100%;
+  padding: 10px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
+
+.shop-item-button.available {
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.shop-item-button.available:hover {
+  transform: scale(1.02);
+}
+
+.shop-item-button.unavailable {
+  background: #666;
+  cursor: not-allowed;
+}
+
+.shop-item-info {
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* Game Over Screen */
+.game-over-screen {
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 50px;
+  border-radius: 20px;
+}
+
+.game-over-title {
+  font-size: 60px;
+  margin: 0 0 20px 0;
+  color: #ff4444;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+.game-over-stats {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.game-over-money {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.button-group {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.pulse-animation {
+  animation: pulse 2s infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
