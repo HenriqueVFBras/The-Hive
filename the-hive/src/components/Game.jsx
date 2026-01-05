@@ -1,5 +1,8 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import '../styles/Game.css';
+import honeySound from '../assets/sounds/Honey.mp3';
+import gameOverSound from '../assets/sounds/GameOver.mp3';
+import getHitSound from '../assets/sounds/GetHit.mp3';
 
 const Game = () => {
   const canvasRef = useRef(null);
@@ -383,9 +386,9 @@ const Game = () => {
   return (
     <div className="game-container">
       {/* Sons do jogo */}
-      <audio ref={shootSoundRef} src="/src/assets/sounds/Honey.mp3" preload="auto" />
-      <audio ref={gameOverSoundRef} src="/src/assets/sounds/GameOver.mp3" preload="auto" />
-      <audio ref={getHitSoundRef} src="/src/assets/sounds/GetHit.mp3" preload="auto" />
+      <audio ref={shootSoundRef} src={honeySound} preload="auto" />
+<audio ref={gameOverSoundRef} src={gameOverSound} preload="auto" />
+<audio ref={getHitSoundRef} src={getHitSound} preload="auto" />
       
       {gameState === 'menu' && (
         <div className="menu-screen fade-in">
