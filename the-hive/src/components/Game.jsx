@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
-import '../styles/Game.css';
+import '../styles/game.css';
 import honeySound from '../assets/sounds/Honey.mp3';
 import gameOverSound from '../assets/sounds/GameOver.mp3';
 import getHitSound from '../assets/sounds/GetHit.mp3';
